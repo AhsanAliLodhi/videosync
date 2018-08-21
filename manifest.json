@@ -23,5 +23,12 @@
     "48": "images/get_started48.png",
     "128": "images/get_started128.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["video_manager.js","content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com; object-src 'self'",
   "manifest_version": 2
 }
